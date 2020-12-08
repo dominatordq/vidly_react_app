@@ -5,9 +5,9 @@ import React from 'react';
 // Output: onClick
 
 // Stateless Functional Component
-const Like = (props) => {
+const Like = props => {
     let classes = "fa fa-heart";
-    if(!props.liked) classes += "-o"
+    if (!props.liked) classes += "-o"
     
     return ( <i 
         onClick={props.onClick} 

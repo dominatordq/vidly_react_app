@@ -2,10 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 
-const Pagination = props => {
-    const { itemsCount, pageSize, currentPage, onPageChange } = props;
+const Pagination = ({ itemsCount, pageSize, currentPage, onPageChange }) => {
     // console.log(currentPage);
-
     const pagesCount = Math.ceil(itemsCount / pageSize);    // rounds up to the nearest whole number
     if (pagesCount === 1) return null;
     const pages = _.range(1, pagesCount + 1); // returns an array [1, 2, 3]
